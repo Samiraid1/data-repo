@@ -5,6 +5,7 @@ import { ProjectModal } from './components/ProjectModal';
 import { AboutMe } from './components/AboutMe';
 import { ProjectFilters } from './components/ProjectFilters';
 import { TrendSpotterGame } from './components/TrendSpotterGame';
+import { DataVizKnowledgeGame } from './components/DataVizKnowledgeGame';
 
 const projects = [
   {
@@ -17,6 +18,27 @@ const projects = [
     additionalImages: [
       'https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000'
+    ],
+    githubUrl: 'https://github.com/username/sales-performance-analytics',
+    liveUrl: 'https://sales-analytics-demo.example.com',
+    challenges: [
+      'Integrating data from multiple disparate sources with different formats',
+      'Handling large volumes of historical sales data efficiently',
+      'Creating visualizations that effectively communicate complex patterns',
+      'Ensuring data accuracy across regional differences'
+    ],
+    solutions: [
+      'Developed custom ETL pipelines using Python to standardize data formats',
+      'Implemented data partitioning and incremental loading strategies',
+      'Created a hierarchical dashboard system with drill-down capabilities',
+      'Built automated data validation checks with alert systems'
+    ],
+    technologies: ['Python', 'Pandas', 'NumPy', 'Tableau', 'SQL', 'PostgreSQL', 'Git'],
+    outcomes: [
+      'Improved sales forecasting accuracy by 25%',
+      'Reduced reporting time from 3 days to 4 hours',
+      'Identified $1.2M in potential revenue opportunities',
+      'Enabled real-time decision making for regional sales teams'
     ]
   },
   {
@@ -29,6 +51,27 @@ const projects = [
     additionalImages: [
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'
+    ],
+    githubUrl: 'https://github.com/username/customer-segmentation',
+    liveUrl: 'https://customer-segments.example.com',
+    challenges: [
+      'Determining the optimal number of customer segments',
+      'Handling missing and inconsistent customer data',
+      'Interpreting complex multidimensional clusters',
+      'Translating technical findings into actionable marketing strategies'
+    ],
+    solutions: [
+      'Applied silhouette analysis and elbow method to determine optimal cluster count',
+      'Developed robust data cleaning and imputation pipelines',
+      'Created interactive 3D visualizations to explore segment characteristics',
+      'Collaborated with marketing team to develop segment-specific strategies'
+    ],
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Seaborn', 'Jupyter', 'AWS'],
+    outcomes: [
+      'Increased marketing campaign ROI by 30%',
+      'Reduced customer churn by 15% through targeted retention strategies',
+      'Improved customer lifetime value prediction accuracy by 22%',
+      'Enabled personalized product recommendations based on segment characteristics'
     ]
   },
   {
@@ -41,6 +84,27 @@ const projects = [
     additionalImages: [
       'https://images.unsplash.com/photo-1494607239400-ff147da48308?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=1000'
+    ],
+    githubUrl: 'https://github.com/username/supply-chain-optimization',
+    liveUrl: 'https://supply-chain-demo.example.com',
+    challenges: [
+      'Optimizing complex multi-node supply chain network',
+      'Balancing inventory levels against service level requirements',
+      'Forecasting demand across seasonal and volatile markets',
+      'Integrating real-time data from IoT devices in warehouses'
+    ],
+    solutions: [
+      'Developed a mixed-integer linear programming model for network optimization',
+      'Created dynamic inventory policies based on service level agreements',
+      'Implemented ensemble forecasting methods combining ARIMA and ML approaches',
+      'Built a real-time data processing pipeline for IoT sensor integration'
+    ],
+    technologies: ['R', 'Power BI', 'SQL Server', 'Azure', 'Python', 'CPLEX', 'IoT'],
+    outcomes: [
+      'Reduced logistics costs by 15%',
+      'Decreased inventory holding costs by 18% while maintaining service levels',
+      'Improved forecast accuracy by 30%',
+      'Reduced equipment downtime by 20% through predictive maintenance'
     ]
   }
 ];
@@ -49,6 +113,7 @@ function App() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [activeGame, setActiveGame] = useState<'trend' | 'knowledge'>('trend');
 
   // Extract unique tags from all projects
   const allTags = useMemo(() => {
@@ -90,7 +155,7 @@ function App() {
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
               <a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a>
-              <a href="#game" className="text-gray-600 hover:text-gray-900">Interactive Game</a>
+              <a href="#game" className="text-gray-600 hover:text-gray-900">Interactive Games</a>
               <div className="flex space-x-4">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                   <Github className="h-6 w-6" />
@@ -136,7 +201,7 @@ function App() {
                   className="text-gray-600 hover:text-gray-900"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Interactive Game
+                  Interactive Games
                 </a>
                 <div className="flex space-x-4 pt-2">
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
@@ -156,7 +221,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <div className="bg-blue-600 text-white py-16">
+      <div className="bg-gray-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-4">Data Analyst & Insights Specialist</h2>
           <p className="text-xl text-blue-100 max-w-2xl">
@@ -182,10 +247,11 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard
-              key={project.id}
-              project={project}
-              onSelect={setSelectedProject}
-            />
+            key={project.id}
+            project={project}
+            onSelect={() => setSelectedProject(project)}
+          />
+          
           ))}
         </div>
 
@@ -198,12 +264,50 @@ function App() {
 
       {/* Interactive Game Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="game">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Interactive Data Visualization Game</h2>
-        <p className="text-gray-600 mb-8">
-          Test your trend spotting skills! Can you identify if the trend is increasing, decreasing, or flat?
-          Look at the line chart and make your best guess.
-        </p>
-        <TrendSpotterGame />
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Interactive Data Games</h2>
+        
+        <div className="mb-6">
+          <div className="flex space-x-4">
+            <button
+              onClick={() => setActiveGame('trend')}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                activeGame === 'trend'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              Trend Spotter Game
+            </button>
+            <button
+              onClick={() => setActiveGame('knowledge')}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                activeGame === 'knowledge'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              Data Viz Knowledge Quiz
+            </button>
+          </div>
+        </div>
+        
+        {activeGame === 'trend' ? (
+          <>
+            <p className="text-gray-600 mb-8">
+              Test your trend spotting skills! Can you identify if the trend is increasing, decreasing, or flat?
+              Look at the line chart and make your best guess.
+            </p>
+            <TrendSpotterGame />
+          </>
+        ) : (
+          <>
+            <p className="text-gray-600 mb-8">
+              Test your knowledge of data visualization concepts! This quiz covers chart types, 
+              statistical measures, and best practices for data analysis.
+            </p>
+            <DataVizKnowledgeGame />
+          </>
+        )}
       </section>
 
       {/* Project Modal */}

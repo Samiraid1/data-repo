@@ -47,24 +47,24 @@ export function AboutMe() {
                 Passionate Data Analyst
               </h3>
               <p className="text-gray-600 mb-6">
-                With over 5 years of experience in data analytics, I specialize in transforming complex
+                With over 2 years of experience in data analytics, I specialize in transforming complex
                 datasets into actionable insights. My expertise lies in developing robust analytical
                 solutions that drive business growth and efficiency.
               </p>
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-600">5+</div>
+                  <div className="text-3xl font-bold text-blue-600">2+</div>
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-600">50+</div>
+                  <div className="text-3xl font-bold text-blue-600">8+</div>
                   <div className="text-sm text-gray-600">Projects Completed</div>
                 </div>
               </div>
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+                src="/images/profile-pic.png"
                 alt="Professional headshot"
                 className="w-full h-full object-cover"
               />
