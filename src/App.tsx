@@ -4,83 +4,88 @@ import { ProjectCard } from './components/ProjectCard';
 import { ProjectModal } from './components/ProjectModal';
 import { AboutMe } from './components/AboutMe';
 import { ProjectFilters } from './components/ProjectFilters';
-import { TrendSpotterGame } from './components/TrendSpotterGame';
 import { DataVizKnowledgeGame } from './components/DataVizKnowledgeGame';
+import {ContactForm} from './components/ContactForm'; 
+import {Publications} from './components/Publications'; 
+import img1 from './images/project1/im3.png';
+import img2 from './images/project1/im2.png';
+import img3 from './images/project1/im1.png';
+import imgp21 from './images/project2/g1.png';
+import imgp22 from './images/project2/image 4.png';
+import imgp23 from './images/project2/image 5.png';
+
+
+
+
+
 
 const projects = [
   {
     id: '1',
-    title: 'Sales Performance Analytics',
-    description: 'Advanced data analysis of sales performance across multiple regions using Python and Tableau.',
+    title: 'Assessing Pharmacists Knowledge Through Questionnaire Analysis',
+    description: 'Advanced data analysis of Pharmacists Knowledge across different measurement using Python ,MS Excel and Tableau.',
     tags: ['Python', 'Tableau', 'Data Visualization', 'SQL'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
-    fullDescription: 'Led an extensive analysis of sales performance across 5 regions, implementing advanced data visualization techniques in Tableau. Developed predictive models using Python that improved sales forecasting accuracy by 25%. Created interactive dashboards that are now used by the executive team for strategic decision-making.',
+    image: img1,
+    fullDescription: ["This project involved conducting data analysis for a Master's student in Pharmacy as part of her thesis on pharmacists' knowledge assessment. The study aimed to evaluate pharmacists' understanding of key pharmaceutical concepts using a structured questionnaire."," I worked with survey data collected from pharmacists at different career stages, applying data cleaning, statistical analysis, and visualization techniques to uncover meaningful insights. The analysis focused on identifying knowledge gaps, trends across experience levels, and key areas for professional development." ,"Using Python (Pandas, NumPy, SciPy, Matplotlib, Seaborn) and MS Excel, I processed the dataset, conducted statistical tests, and generated data-driven visualizations to support the thesis findings. The results provided valuable insights into the strengths and weaknesses in pharmacists' knowledge, contributing to evidence-based recommendations for pharmaceutical education and training programs."],
     additionalImages: [
-      'https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&q=80&w=1000',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000'
+      img2,img3
     ],
-    githubUrl: 'https://github.com/username/sales-performance-analytics',
-    liveUrl: 'https://sales-analytics-demo.example.com',
+    githubUrl: 'https://github.com/Samiraid1/Assessing-Pharmacists-Knowledge-Through-Questionnaire-Analysis',
+    liveUrl: 'https://github.com/Samiraid1/Assessing-Pharmacists-Knowledge-Through-Questionnaire-Analysis',
     challenges: [
-      'Integrating data from multiple disparate sources with different formats',
-      'Handling large volumes of historical sales data efficiently',
-      'Creating visualizations that effectively communicate complex patterns',
-      'Ensuring data accuracy across regional differences'
+      'Handling Diverse Data from Pharmacists at Different Career Stages',
+      'Ensuring Data Quality and Consistency Across Responses',
+      'Presenting Analytical Findings Clearly for a Thesis Audience'
     ],
     solutions: [
-      'Developed custom ETL pipelines using Python to standardize data formats',
-      'Implemented data partitioning and incremental loading strategies',
-      'Created a hierarchical dashboard system with drill-down capabilities',
-      'Built automated data validation checks with alert systems'
+      'Grouped respondents based on career stage and experience levels, and used statistical techniques (e.g., ANOVA, correlation analysis) to analyze patterns and variations in knowledge across these segments.',
+      'Applied thorough data cleaning using Pandas and NumPy to address missing values, inconsistent formatting, and outliers. Validated the integrity of the dataset before proceeding to analysis.',
+      'Used Matplotlib, Seaborn, and Excel charts to create accessible visualizations. Structured results in a narrative format aligned with academic research standards, making the insights easy to interpret for non-technical readers.'
     ],
     technologies: ['Python', 'Pandas', 'NumPy', 'Tableau', 'SQL', 'PostgreSQL', 'Git'],
     outcomes: [
-      'Improved sales forecasting accuracy by 25%',
-      'Reduced reporting time from 3 days to 4 hours',
-      'Identified $1.2M in potential revenue opportunities',
-      'Enabled real-time decision making for regional sales teams'
+      'Discovered significant trends and knowledge disparities across seniority levels, providing a solid basis for tailored education strategies.',
+      'Produced a high-quality, consistent dataset that enabled accurate and reliable insights to be drawn from the survey.',
+      'Helped the Pharmacy Master’s student present her findings clearly in her thesis, strengthening her arguments with compelling data visualizations and evidence-based recommendations.'
     ]
   },
   {
     id: '2',
-    title: 'Customer Segmentation Analysis',
-    description: 'Machine learning-based customer segmentation using K-means clustering.',
-    tags: ['Python', 'Scikit-learn', 'Machine Learning', 'Pandas'],
-    image: 'https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80&w=1000',
-    fullDescription: 'Implemented a sophisticated customer segmentation model using K-means clustering algorithm. Analyzed customer behavior patterns across 100,000+ transactions. The resulting segments helped optimize marketing campaigns, leading to a 30% increase in campaign ROI.',
+    title: 'Is Experience Enough? Analyzing Pharmacists Knowledge Gaps',
+    description: 'Analyzed survey data from 315 pharmacists to assess knowledge trends across different experience levels, focusing on medicine usage and up-to-date pharmaceutical practices.',
+    tags: ['Python', 'Scikit-learn', 'Excel', 'Pandas','Data Visualization'],
+    image: imgp21,
+    fullDescription: ["In this data analytics project, I analyzed responses from a questionnaire completed by 315 pharmacists to assess their knowledge across varying levels of seniority and years of experience. The questionnaire focused on the correct use and application of different medicines, aiming to evaluate whether pharmacists knowledge aligns with current pharmaceutical standards and practices.","My role involved cleaning and analyzing the dataset, performing statistical comparisons between experience groups, and generating insightful visualizations to highlight patterns and knowledge gaps. The goal was to identify trends in knowledge retention, reveal areas for continuing education, and support the thesis work of a Pharmacy Master's student.","The analysis revealed notable variations in knowledge based on professional experience, helping to draw evidence-based conclusions on the effectiveness of ongoing professional development in the field of pharmacy."],
     additionalImages: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'
+      imgp22,imgp23
     ],
-    githubUrl: 'https://github.com/username/customer-segmentation',
-    liveUrl: 'https://customer-segments.example.com',
+    githubUrl: 'https://github.com/Samiraid1/Assessing-Pharmacists-Knowledge-Through-Questionnaire-Analysis',
+    liveUrl: 'https://github.com/Samiraid1/Assessing-Pharmacists-Knowledge-Through-Questionnaire-Analysis',
     challenges: [
-      'Determining the optimal number of customer segments',
-      'Handling missing and inconsistent customer data',
-      'Interpreting complex multidimensional clusters',
-      'Translating technical findings into actionable marketing strategies'
+      'Incomplete or Inconsistent Survey Responses',
+      'Comparing Knowledge Across Experience Levels',
+      'Communicating Complex Findings to a Non-Technical Audience'
+      
     ],
     solutions: [
-      'Applied silhouette analysis and elbow method to determine optimal cluster count',
-      'Developed robust data cleaning and imputation pipelines',
-      'Created interactive 3D visualizations to explore segment characteristics',
-      'Collaborated with marketing team to develop segment-specific strategies'
+      'Applied data cleaning techniques using Pandas to handle missing values and normalize inconsistent inputs. Removed irrelevant entries while preserving statistical validity.',
+      'Categorized respondents based on years of experience and professional titles, then applied statistical tests (e.g., ANOVA, t-tests) to compare performance across groups.',
+      'Created clear, intuitive data visualizations using Matplotlib and Seaborn, and prepared an explanatory summary tailored for an academic thesis.'
     ],
-    technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Seaborn', 'Jupyter', 'AWS'],
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter', 'Excel'],
     outcomes: [
-      'Increased marketing campaign ROI by 30%',
-      'Reduced customer churn by 15% through targeted retention strategies',
-      'Improved customer lifetime value prediction accuracy by 22%',
-      'Enabled personalized product recommendations based on segment characteristics'
+      'Achieved a clean and reliable dataset for accurate analysis and visualization.',
+      'Identified significant knowledge differences between junior and senior pharmacists, highlighting areas for targeted training.',
+      'Enabled the Pharmacy Master’s student to effectively present her findings in her thesis and defend them with strong, evidence-based visuals.'
     ]
   },
-  {
+  /*{
     id: '3',
     title: 'Supply Chain Optimization',
     description: 'End-to-end supply chain analysis and optimization using advanced analytics.',
     tags: ['R', 'Power BI', 'Supply Chain', 'Optimization'],
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
-    fullDescription: 'Developed a comprehensive supply chain optimization model that reduced logistics costs by 15%. Created interactive Power BI dashboards for real-time monitoring of key performance indicators. Implemented predictive maintenance models that decreased equipment downtime by 20%.',
+    fullDescription: ['Developed a comprehensive supply chain optimization model that reduced logistics costs by 15%. Created interactive Power BI dashboards for real-time monitoring of key performance indicators. Implemented predictive maintenance models that decreased equipment downtime by 20%.'],
     additionalImages: [
       'https://images.unsplash.com/photo-1494607239400-ff147da48308?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=1000'
@@ -106,7 +111,7 @@ const projects = [
       'Improved forecast accuracy by 30%',
       'Reduced equipment downtime by 20% through predictive maintenance'
     ]
-  }
+  }*/
 ];
 
 function App() {
@@ -153,17 +158,19 @@ function App() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
+            <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
               <a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a>
-              <a href="#game" className="text-gray-600 hover:text-gray-900">Interactive Games</a>
+              <a href="#publications" className="text-gray-600 hover:text-gray-900">Publications</a>
+              <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
+              <a href="#game" className="text-gray-600 hover:text-gray-900">Knowledge Quiz</a>
               <div className="flex space-x-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+                <a href="https://github.com/Samiraid1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+                <a href="https://www.linkedin.com/in/sami-abdel-fattah/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
+                <a href="mailto:sami97al@gmail.com" target='_blank' className="text-gray-600 hover:text-gray-900">
                   <Mail className="h-6 w-6" />
                 </a>
               </div>
@@ -182,7 +189,7 @@ function App() {
           {isMenuOpen && (
             <nav className="md:hidden py-4">
               <div className="flex flex-col space-y-4">
-                <a
+              <a
                   href="#about"
                   className="text-gray-600 hover:text-gray-900"
                   onClick={() => setIsMenuOpen(false)}
@@ -197,20 +204,34 @@ function App() {
                   Projects
                 </a>
                 <a
+                  href="#publications"
+                  className="text-gray-600 hover:text-gray-900"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Publications
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-600 hover:text-gray-900"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </a>
+                <a
                   href="#game"
                   className="text-gray-600 hover:text-gray-900"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Interactive Games
+                  Knowledge Quiz
                 </a>
                 <div className="flex space-x-4 pt-2">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+                  <a href="https://github.com/Samiraid1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+                  <a href="https://www.linkedin.com/in/sami-abdel-fattah/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                     <Linkedin className="h-6 w-6" />
                   </a>
-                  <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
+                  <a href="mailto:ami97al@gmail.com" className="text-gray-600 hover:text-gray-900">
                     <Mail className="h-6 w-6" />
                   </a>
                 </div>
@@ -262,53 +283,31 @@ function App() {
         )}
       </main>
 
-      {/* Interactive Game Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="game">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Interactive Data Games</h2>
-        
-        <div className="mb-6">
-          <div className="flex space-x-4">
-            <button
-              onClick={() => setActiveGame('trend')}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                activeGame === 'trend'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              Trend Spotter Game
-            </button>
-            <button
-              onClick={() => setActiveGame('knowledge')}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                activeGame === 'knowledge'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              Data Viz Knowledge Quiz
-            </button>
-          </div>
+      {/* Publications Section */}
+       <Publications />
+
+      {/* Contact Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="contact">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Need help with data analysis or statistical analysis? Fill out the form below
+            and I'll get back to you within 24 hours to discuss your project.
+          </p>
         </div>
-        
-        {activeGame === 'trend' ? (
-          <>
-            <p className="text-gray-600 mb-8">
-              Test your trend spotting skills! Can you identify if the trend is increasing, decreasing, or flat?
-              Look at the line chart and make your best guess.
-            </p>
-            <TrendSpotterGame />
-          </>
-        ) : (
-          <>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge of data visualization concepts! This quiz covers chart types, 
-              statistical measures, and best practices for data analysis.
-            </p>
-            <DataVizKnowledgeGame />
-          </>
-        )}
+        <ContactForm />
       </section>
+
+       {/* Interactive Game Section */}
+       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="game">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Data Visualization Knowledge Quiz</h2>
+        <p className="text-gray-600 mb-8">
+          Test your knowledge of data visualization concepts! This quiz covers chart types, 
+          statistical measures, and best practices for data analysis.
+        </p>
+        <DataVizKnowledgeGame />
+      </section>
+
 
       {/* Project Modal */}
       {selectedProject && (
@@ -322,7 +321,7 @@ function App() {
       <footer className="bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-600">
-            <p>© 2024 Data Analytics Portfolio. All rights reserved.</p>
+            <p>Sami's Data Analytics Portfolio.</p>
           </div>
         </div>
       </footer>

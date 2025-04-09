@@ -7,7 +7,7 @@ interface Project {
   description: string;
   tags: string[];
   image: string;
-  fullDescription: string;
+  fullDescription: string[];
   additionalImages: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -60,12 +60,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-[400px] object-cover rounded-lg mb-6"
+            className="w-full h-[400px]  rounded-lg mb-6"
           />
           
           <div className="prose max-w-none mb-8">
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Project Overview</h3>
-            <p className="text-gray-700 text-lg">{project.fullDescription}</p>
+            <p className="text-gray-700 text-lg">{project.fullDescription.map((desc, index) => (
+            <p key={index}>{desc}</p>  // This will display each part of the fullDescription array
+                ))} </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -116,7 +118,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 key={index}
                 src={img}
                 alt={`${project.title} detail ${index + 1}`}
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-48 rounded-lg"
               />
             ))}
           </div>

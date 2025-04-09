@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, BookOpen, Code2, Database } from 'lucide-react';
 import { SkillCard } from './SkillCard';
+import profilePic from '../images/profile-pic.png';
 
 const skills = {
   dataAnalysis: [
@@ -43,8 +44,11 @@ export function AboutMe() {
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Passionate Data Analyst
+            <h1 className="text-4xl font-semibold text-gray-900 mb-4">
+                Sami Abdel-Fattah
+              </h1>
+              <h3 className="text-2xl font-semibold text-gray-600 mb-4">
+                (Passionate Data Analyst)
               </h3>
               <p className="text-gray-600 mb-6">
                 With over 2 years of experience in data analytics, I specialize in transforming complex
@@ -62,11 +66,11 @@ export function AboutMe() {
                 </div>
               </div>
             </div>
-            <div className="relative h-64 rounded-lg overflow-hidden">
+            <div className="relative h-64 rounded-lg overflow-hidden flex justify-center items-center">
               <img
-                src="/images/profile-pic.png"
+                src = {profilePic}
                 alt="Professional headshot"
-                className="w-full h-full object-cover"
+                className=" h-full w-auto   "
               />
             </div>
           </div>

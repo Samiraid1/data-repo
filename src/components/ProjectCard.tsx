@@ -7,7 +7,7 @@ interface Project {
   description: string;
   tags: string[];
   image: string;
-  fullDescription: string;
+  fullDescription: string[];
   additionalImages: string[];
   githubUrl?: string;
   liveUrl?: string;
